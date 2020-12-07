@@ -40,11 +40,11 @@ export class AppComponent {
 
     this.menueEintraegeArray = [
       {
-        titel: "Cards",
+        titel: "Karten",
         ziel: "/home"
       },
       {
-        titel: "Grid 1",
+        titel: "RGB-Farbwahl binär",
         ziel: "/seite2"
       }
     ];

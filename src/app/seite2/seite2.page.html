@@ -3,50 +3,33 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Grid 1</ion-title>
+    <ion-title>RGB-Farbwahl binär</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-grid>
+  <ion-list>
+    <ion-item>
+      <ion-label>Rot</ion-label>
+      <ion-toggle slot="start" color="danger" name="rot" checked></ion-toggle>
+    </ion-item>
 
-    <ion-row><!-- Zeile 1 -->
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Karte 1</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Diese Karte hat die ganze Zeile 1 mit 12 Spalten für sich alleine.
-          </ion-card-content>
-        </ion-card>          
-      </ion-col>
-    </ion-row>
+    <ion-item>
+      <ion-label>Grün</ion-label>
+      <ion-toggle slot="start" color="success"name="gruen" checked></ion-toggle>
+    </ion-item>
 
-    <ion-row><!-- Zeile 2 -->
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Karte 2a</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Die zweite Karte, die nur die Hälfte der zweiten Zeile belegt.
-          </ion-card-content>
-        </ion-card>          
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Karte 2b</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Die zweite Karte, die die andere  Hälfte der zweiten Zeile belegt.
-          </ion-card-content>
-        </ion-card>          
-      </ion-col>
+    <ion-item>
+      <ion-label>Blau</ion-label>
+      <ion-toggle slot="start" color="primary" name="blau" checked></ion-toggle>
+    </ion-item>
 
-    </ion-row>
-  </ion-grid>
+    <ion-item>
+      <ion-label>Volle Deckkraft</ion-label>
+      <ion-toggle slot="start" color="medium" name="deckend" checked></ion-toggle>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
