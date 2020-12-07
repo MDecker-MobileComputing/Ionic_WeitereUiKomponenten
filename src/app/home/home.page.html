@@ -1,15 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Karten Demo
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Karten-Demo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <ion-card>
-    <img src="./assets/bilder/schloss-karlsruhe.jpg" />
+    <img src="./assets/bilder/schloss-karlsruhe.jpg" /><!-- Das Bild liegt im Projekt-Ordner unter src/assets/bilder/ -->
     <ion-card-header>
       <ion-card-title>Karte mit Bild</ion-card-title>
     </ion-card-header>
@@ -18,7 +19,7 @@
       (Quelle: pixabay.com, Bild 3257297 von User "maxmann").
     </ion-card-content>
   </ion-card>
-
+  
   <ion-card>
     <ion-card-header>
       <ion-card-title>Karte ohne Bild</ion-card-title>
