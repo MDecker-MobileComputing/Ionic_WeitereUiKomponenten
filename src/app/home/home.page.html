@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Karten Demo
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <img src="./assets/bilder/schloss-karlsruhe.jpg" />
+    <ion-card-header>
+      <ion-card-title>Karte mit Bild</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Das Bild zeigt das Schloss Karlsruhe (Foto 3257297 von Pixabay-User "maxmann")
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Noch eine Karte</ion-card-subtitle>
+      <ion-card-title>Karte ohne Bild</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Diese Karte hat kein Bild, dafür aber einen Untertitel
+    </ion-card-content>
+  </ion-card>  
+
 </ion-content>
