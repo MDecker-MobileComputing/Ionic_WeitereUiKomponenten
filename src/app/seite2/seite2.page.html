@@ -7,27 +7,30 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- Attribut checked="true" statt nur "checked", auch wenn in Doku letzteres verwendet wird,
+     um konsistent key-value-Format für HTML-Attribute zu verwenden. -->
+
 <ion-content [fullscreen]="true">
 
   <ion-list>
     <ion-item>
       <ion-label>Rot</ion-label>
-      <ion-toggle slot="start" color="danger" name="rot" checked></ion-toggle>
+      <ion-toggle slot="start" color="danger" name="rot" checked="true"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>Grün</ion-label>
-      <ion-toggle slot="start" color="success"name="gruen" checked></ion-toggle>
+      <ion-toggle slot="start" color="success"name="gruen" checked="true"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>Blau</ion-label>
-      <ion-toggle slot="start" color="primary" name="blau" checked></ion-toggle>
+      <ion-toggle slot="start" color="primary" name="blau" checked="false"></ion-toggle>
     </ion-item>
 
     <ion-item>
       <ion-label>Volle Deckkraft</ion-label>
-      <ion-toggle slot="start" color="medium" name="deckend" checked></ion-toggle>
+      <ion-toggle slot="start" color="medium" name="deckend" checked="false"></ion-toggle>
     </ion-item>
 
   </ion-list>
