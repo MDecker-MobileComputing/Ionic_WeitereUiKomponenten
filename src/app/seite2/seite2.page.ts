@@ -1,15 +1,57 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-seite2',
   templateUrl: './seite2.page.html',
   styleUrls: ['./seite2.page.scss'],
 })
-export class Seite2Page implements OnInit {
+export class Seite2Page {
 
-  constructor() { }
+  /**
+   * Hexcode von aktuellem Farbcode, wird per Interpolation an CSS-Attribut gebunden.
+   *
+   * Beispiel-Wert für gelb: `#FFFF00`
+   */
+  private farbeHexCode = "";
 
-  ngOnInit() {
+  private rotAn = false;
+
+  private gruenAn = true;
+
+  private blauAn = true;
+
+
+  /**
+   * Event-Handler-Methode für Änderung Zustand einer der Toggle-Buttons.
+   */
+  private onToggleGeandert() {
+
+    this.erstelleFarbcode();
+  }
+
+
+  /**
+   * Lifecycle-Methode, wird unmittelbar vor Anzeige der Seite aufgerufen; führt
+   * Neuberechnung von Farbcode aus.
+   */
+  private ionViewWillEnter() {
+
+    this.erstelleFarbcode();
+  }
+
+
+  /**
+   * Aktuellen Farbcode erstellen und in Member-Variable schreiben.
+   */
+  private erstelleFarbcode() {
+
+    let farbcode = "#";
+
+    if (this.rotAn  ) { farbcode += "FF"; } else { farbcode += "00"; }
+    if (this.gruenAn) { farbcode += "FF"; } else { farbcode += "00"; }
+    if (this.blauAn ) { farbcode += "FF"; } else { farbcode += "00"; }
+
+    this.farbeHexCode = farbcode;
   }
 
 }
