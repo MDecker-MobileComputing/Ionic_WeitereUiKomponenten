@@ -48,7 +48,7 @@ export class AppComponent {
         ziel: "/seite2"
       },
       {
-        titel: "Max. Datenrate WLAN",
+        titel: "Datenrate Wi-Fi 6",
         ziel: "/seite3"
       }
     ];

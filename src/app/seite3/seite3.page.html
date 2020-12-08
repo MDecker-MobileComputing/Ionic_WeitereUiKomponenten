@@ -3,55 +3,53 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Max. Datenrate WLAN</ion-title>
+      <ion-title>Datenrate Wi-Fi 6 (802.11ax)</ion-title>
     </ion-toolbar>
   </ion-header>
 
 <ion-content [fullscreen]="true">
 
     <p class="ion-padding">
-       Wählen Sie die Details zum Wifi-Netz aus,
-       um die theoretische Maximaldatenrate (Brutto) zu erfahren.
+      Berechnung der maximalen Datenrate (Brutto) für WLANs mit Wi-Fi 6 (802.11ax).
     </p>
 
     <ion-list>
 
         <ion-item>
-            <ion-label>WLAN-Standard</ion-label>
-            <ion-select value="wifi_ac">
-              <ion-select-option value="wifi_a" >802.11a  (Wi-Fi 2)</ion-select-option>
-              <ion-select-option value="wifi_b" >802.11b  (Wi-Fi 1)</ion-select-option>
-              <ion-select-option value="wifi_g" >802.11g  (Wi-Fi 3)</ion-select-option>
-              <ion-select-option value="wifi_n" >802.11n  (Wi-Fi 4)</ion-select-option>
-              <ion-select-option value="wifi_ac">802.11ac (Wi-Fi 5)</ion-select-option>
-              <ion-select-option value="wifi_ax">802.11ax (Wi-Fi 6)</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
             <ion-label>Kanalbreite</ion-label>
-            <ion-select value="breite_20">
+            <ion-select [(ngModel)]="kanalbreite">
               <ion-select-option value="breite_20"  > 20 MHz</ion-select-option>
-              <ion-select-option value="breite_40"  > 40 MHz (ab Wi-Fi 4)</ion-select-option>
-              <ion-select-option value="breite_80"  > 80 MHz (ab Wi-Fi 5)</ion-select-option>
-              <ion-select-option value="breite_160" >160 MHz (ab Wi-Fi 5)</ion-select-option>
+              <ion-select-option value="breite_40"  > 40 MHz</ion-select-option>
+              <ion-select-option value="breite_80"  > 80 MHz</ion-select-option>
+              <ion-select-option value="breite_160" >160 MHz</ion-select-option>
             </ion-select>
         </ion-item>
 
         <ion-item>
-            <ion-label>Anzahl Stream</ion-label>
-            <ion-select value="streams_1">
-              <ion-select-option value="streams_1">1 Stream (ab Wi-Fi 1)</ion-select-option>
-              <ion-select-option value="streams_2">2 Stream (ab Wi-Fi 4)</ion-select-option>
-              <ion-select-option value="streams_3">3 Stream (ab Wi-Fi 4)</ion-select-option>
-              <ion-select-option value="streams_4">4 Stream (ab Wi-Fi 4)</ion-select-option>
-              <ion-select-option value="streams_5">5 Stream (ab Wi-Fi 5)</ion-select-option>
-              <ion-select-option value="streams_6">6 Stream (ab Wi-Fi 6)</ion-select-option>
-              <ion-select-option value="streams_7">7 Stream (ab Wi-Fi 7)</ion-select-option>
-              <ion-select-option value="streams_8">8 Stream (ab Wi-Fi 8)</ion-select-option>
+            <ion-label>Anzahl Streams</ion-label>
+            <ion-select [(ngModel)]="anzahlStreams">
+              <ion-select-option value="streams_1">1</ion-select-option>
+              <ion-select-option value="streams_2">2</ion-select-option>
+              <ion-select-option value="streams_3">3</ion-select-option>
+              <ion-select-option value="streams_4">4</ion-select-option>
+              <ion-select-option value="streams_5">5</ion-select-option>
+              <ion-select-option value="streams_6">6</ion-select-option>
+              <ion-select-option value="streams_7">7</ion-select-option>
+              <ion-select-option value="streams_8">8</ion-select-option>
             </ion-select>
         </ion-item>
 
     </ion-list>
+
+    &nbsp;
+
+    <ion-button expand="block" (click)="onBerechnenButton()">Datenrate berechnen</ion-button>
+
+    &nbsp;
+
+    <p class="ion-padding">
+      Angezeigt wird die max. Brutto-Datenrate für das gesamte Netz.
+      Die Netto-Datenrate beträgt ungefähr 50% der Brutto-Datenrate.
+    </p>
 
 </ion-content>
