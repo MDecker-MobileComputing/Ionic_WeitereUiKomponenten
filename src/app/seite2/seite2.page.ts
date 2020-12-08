@@ -14,10 +14,13 @@ export class Seite2Page {
    */
   private farbeHexCode = "";
 
+  /** Wert für Toggle-Button zum Ein-/ausschalten von Rot-Anteil. */
   private rotAn = false;
 
+    /** Wert für Toggle-Button zum Ein-/ausschalten von Grün-Anteil. */
   private gruenAn = true;
 
+  /** Wert für Toggle-Button zum Ein-/ausschalten von Blau-Anteil. */
   private blauAn = true;
 
 
