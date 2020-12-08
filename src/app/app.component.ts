@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   initializeApp() {
-    
+
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
@@ -40,12 +40,16 @@ export class AppComponent {
 
     this.menueEintraegeArray = [
       {
-        titel: "Karten",
+        titel: "Kärtchen",
         ziel: "/home"
       },
       {
         titel: "RGB-Farbwahl binär",
         ziel: "/seite2"
+      },
+      {
+        titel: "Max. Datenrate WLAN",
+        ziel: "/seite3"
       }
     ];
   }
