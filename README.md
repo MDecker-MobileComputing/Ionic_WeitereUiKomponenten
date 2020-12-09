@@ -12,3 +12,6 @@ The ionic app contained in this repository demonstrates the following UI compone
 ## License ##
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (GPL v3) for the files in this repository.
+
+The project contains [this image](https://pixabay.com/de/photos/schloss-karlsruhe-baden-w%C3%BCrttemberg-3257297/) from [User "maxmann](https://pixabay.com/de/users/maxmann-665103/)
+at `pixabay.com`. 
