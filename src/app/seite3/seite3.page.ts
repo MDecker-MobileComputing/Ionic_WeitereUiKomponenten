@@ -7,7 +7,8 @@ import { AlertController } from '@ionic/angular';
  * * Tabelle mit Datenraten von 802.11ax:
  *   * https://www.elektronik-kompendium.de/sites/net/2010241.htm
  *   * https://www.computerweekly.com/de/ratgeber/Wi-Fi-6-Was-kann-WLAN-80211ax-besser-als-80211ac
- * * Kodierungsverfahren für 802.11ax: https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11ax-modulation-coding.php
+ * * Kodierungsverfahren für 802.11ax (bis zu 1024-QAM):
+ *   https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11ax-modulation-coding.php
  *
  * "Im 5-GHz-WLAN-Band unterstützt 802.11ax Kanalbandbreiten von 20, 40, 80 und 160 MHz.
  *  Im schmäleren 2,4-GHz-Band dürfen die Kanäle 20 oder 40 MHz breit sein."
