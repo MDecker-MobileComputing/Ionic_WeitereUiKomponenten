@@ -45,13 +45,26 @@ export class Seite3Page {
     let faktorStreams     = 0;
     let grunddatenrate    = 0;
 
+    switch (this.kanalbreite) {
+
+        case "breite_20" : faktorKanalbreite = 1; break;
+        case "breite_40" : faktorKanalbreite = 2; break;
+        case "breite_80" : faktorKanalbreite = 4; break;
+        case "breite_160": faktorKanalbreite = 8; break;
+
+        default:
+          this.zeigeDialog("Interner Fehler", `Unerwarteter Code "${this.kanalbreite}" für Kanalbreite.`);
+          return;
+    }
 
     switch (this.frequenzband) {
 
         case "band_24": grunddatenrate = 144;
                         if (faktorKanalbreite > 2) {
-                            this.zeigeDialog("Ungültige Eingabe", `Kanalbreite größer 40 MHz ist nur im 5 GHz-Band möglich.`);
-                            break;
+
+                            this.zeigeDialog("Ungültige Eingabe",
+                                             "Kanalbreiten größer 40 MHz ist nur im 5 GHz-Band möglich.");
+                            return;
                         }
                         break;
 
@@ -60,18 +73,6 @@ export class Seite3Page {
         default:
             this.zeigeDialog("Interner Fehler", `Unerwarteter Code "${this.frequenzband}" für Frequenzband.`);
             return;
-    }
-
-    switch (this.kanalbreite) {
-
-      case "breite_20" : faktorKanalbreite = 1; break;
-      case "breite_40" : faktorKanalbreite = 2; break;
-      case "breite_80" : faktorKanalbreite = 4; break;
-      case "breite_160": faktorKanalbreite = 8; break;
-
-      default:
-        this.zeigeDialog("Interner Fehler", `Unerwarteter Code "${this.kanalbreite}" für Kanalbreite.`);
-        return;
     }
 
     switch (this.anzahlStreams) {
@@ -91,8 +92,7 @@ export class Seite3Page {
     }
 
 
-
-
+    // Eigentliche Berechnung
     const datenrate = grunddatenrate * faktorKanalbreite * faktorStreams;
 
     this.zeigeDialog("Ergebnis", `Maximale Datenrate (Brutto):<br><br>${datenrate} MBits/s`);
