@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 /**
- * Tabellen mit Datenraten von 802.11ax:
- * https://www.elektronik-kompendium.de/sites/net/0610051.htm
+ *
+ * * Tabelle mit Datenraten von 802.11ax: https://www.elektronik-kompendium.de/sites/net/2010241.htm
+ * * Kodierungsverfahren für 802.11ax: https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11ax-modulation-coding.php
  */
 @Component({
   selector: 'app-seite3',
