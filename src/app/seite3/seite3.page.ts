@@ -18,6 +18,7 @@ export class Seite3Page {
   /** Variable ist mit Two-Way-Binding an `ion-select` gebunden, für Auswahl Anzahl der Streams. */
   private anzahlStreams = "streams_1";
 
+
   /**
    * Constructor für *Dependency Injection*.
    */
