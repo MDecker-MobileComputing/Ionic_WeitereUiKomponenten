@@ -2,9 +2,16 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 /**
+ * Seite zur Demonstration Verwendung von UI-Komponente `ion-select`.
  *
- * * Tabelle mit Datenraten von 802.11ax: https://www.elektronik-kompendium.de/sites/net/2010241.htm
+ * * Tabelle mit Datenraten von 802.11ax:
+ *   * https://www.elektronik-kompendium.de/sites/net/2010241.htm
+ *   * https://www.computerweekly.com/de/ratgeber/Wi-Fi-6-Was-kann-WLAN-80211ax-besser-als-80211ac
  * * Kodierungsverfahren für 802.11ax: https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11ax-modulation-coding.php
+ *
+ * "Im 5-GHz-WLAN-Band unterstützt 802.11ax Kanalbandbreiten von 20, 40, 80 und 160 MHz.
+ *  Im schmäleren 2,4-GHz-Band dürfen die Kanäle 20 oder 40 MHz breit sein."
+ * (Quelle: computerweekly.com)
  */
 @Component({
   selector: 'app-seite3',
@@ -12,6 +19,9 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./seite3.page.scss'],
 })
 export class Seite3Page {
+
+  /** Variable ist mit Two-Way-Binding an `ion-select` gebunden, für Auswahl Frequenzbereich. */
+  private frequenzband = "band_24";
 
   /** Variable ist mit Two-Way-Binding an `ion-select` gebunden, für Auswahl Kanalbreite in MHz. */
   private kanalbreite = "breite_20";
@@ -33,6 +43,24 @@ export class Seite3Page {
 
     let faktorKanalbreite = 0;
     let faktorStreams     = 0;
+    let grunddatenrate    = 0;
+
+
+    switch (this.frequenzband) {
+
+        case "band_24": grunddatenrate = 144;
+                        if (faktorKanalbreite > 2) {
+                            this.zeigeDialog("Ungültige Eingabe", `Kanalbreite größer 40 MHz ist nur im 5 GHz-Band möglich.`);
+                            break;
+                        }
+                        break;
+
+        case "band_5" : grunddatenrate = 150; break;
+
+        default:
+            this.zeigeDialog("Interner Fehler", `Unerwarteter Code "${this.frequenzband}" für Frequenzband.`);
+            return;
+    }
 
     switch (this.kanalbreite) {
 
@@ -62,7 +90,10 @@ export class Seite3Page {
         return;
     }
 
-    const datenrate = 150 * faktorKanalbreite * faktorStreams;
+
+
+
+    const datenrate = grunddatenrate * faktorKanalbreite * faktorStreams;
 
     this.zeigeDialog("Ergebnis", `Maximale Datenrate (Brutto):<br><br>${datenrate} MBits/s`);
   }
