@@ -9,6 +9,15 @@ The ionic app contained in this repository demonstrates the following UI compone
 
 ----
 
+## Screenshots ##
+
+![Screenshot 1](screenshot_1.png)   ![Screenshot 2](screenshot_2.png) 
+![Screenshot 3](screenshot_3.png)   ![Screenshot 4](screenshot_4.png) 
+
+<br>
+
+----
+
 ## License ##
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (GPL v3) for the files in this repository.
