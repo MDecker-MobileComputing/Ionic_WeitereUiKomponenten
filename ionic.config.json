@@ -1,7 +1,7 @@
 {
-  "name": "ionic_weitere_ui_komponenten",
+  "name": "WeitereUiKomponenten",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
   "type": "angular"
 }

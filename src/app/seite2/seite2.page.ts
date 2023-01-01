@@ -12,22 +12,22 @@ export class Seite2Page {
    *
    * Beispiel-Wert für gelb: `#FFFF00`
    */
-  private farbeHexCode = "";
+  public farbeHexCode = "";
 
   /** Wert für Toggle-Button zum Ein-/ausschalten von Rot-Anteil. */
-  private rotAn = false;
+  public rotAn = false;
 
     /** Wert für Toggle-Button zum Ein-/ausschalten von Grün-Anteil. */
-  private gruenAn = true;
+    public gruenAn = true;
 
   /** Wert für Toggle-Button zum Ein-/ausschalten von Blau-Anteil. */
-  private blauAn = true;
+  public blauAn = true;
 
 
   /**
    * Event-Handler-Methode für Änderung Zustand einer der Toggle-Buttons.
    */
-  private onToggleGeandert() {
+  public onToggleGeandert() {
 
     this.erstelleFarbcode();
   }

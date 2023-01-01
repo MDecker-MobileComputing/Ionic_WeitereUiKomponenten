@@ -22,13 +22,13 @@ import { AlertController } from '@ionic/angular';
 export class Seite3Page {
 
   /** Variable ist mit Two-Way-Binding an `ion-select` gebunden, für Auswahl Frequenzbereich. */
-  private frequenzband = "band_24";
+  public frequenzband = "band_24";
 
   /** Variable ist mit Two-Way-Binding an `ion-select` gebunden, für Auswahl Kanalbreite in MHz. */
-  private kanalbreite = "breite_20";
+  public kanalbreite = "breite_20";
 
   /** Variable ist mit Two-Way-Binding an `ion-select` gebunden, für Auswahl Anzahl der Streams. */
-  private anzahlStreams = "streams_1";
+  public anzahlStreams = "streams_1";
 
 
   /**
@@ -40,7 +40,7 @@ export class Seite3Page {
   /**
    * Event-Handler für Button zur Durchführung der Berechnung.
    */
-  private onBerechnenButton() {
+  public onBerechnenButton() {
 
     let faktorKanalbreite = 0;
     let faktorStreams     = 0;
@@ -64,7 +64,7 @@ export class Seite3Page {
                         if (faktorKanalbreite > 2) {
 
                             this.zeigeDialog("Ungültige Eingabe",
-                                             "Kanalbreiten größer 40 MHz ist nur im 5 GHz-Band möglich.");
+                                             "Kanalbreiten größer 40 MHz sind nur im 5 GHz-Band möglich.");
                             return;
                         }
                         break;
@@ -107,7 +107,7 @@ export class Seite3Page {
    *
    * @param nachricht  Eigentlich Nachricht des Dialogs.
    */
-  async zeigeDialog(titel: string, nachricht: string) {
+  private async zeigeDialog(titel: string, nachricht: string) {
 
     const meinAlert =
           await this.alertCtrl.create({
@@ -118,6 +118,5 @@ export class Seite3Page {
 
     await meinAlert.present();
   }
-
 
 }
