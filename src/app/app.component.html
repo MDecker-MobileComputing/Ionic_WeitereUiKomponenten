@@ -6,8 +6,8 @@
       </ion-toolbar>
     </ion-header>
     <ion-content color="light">
-      <ion-list *ngFor="let eintrag of menueEintraegeArray">
-        <ion-menu-toggle auto-hide="true">
+      <ion-list>
+        <ion-menu-toggle *ngFor="let eintrag of menueEintraegeArray" auto-hide="true">
           <ion-item [routerLink]="eintrag.ziel" routerDirection="forward">{{eintrag.titel}}</ion-item>
         </ion-menu-toggle>
       </ion-list>
