@@ -96,7 +96,7 @@ export class Seite3Page {
     // Eigentliche Berechnung
     const datenrate = grunddatenrate * faktorKanalbreite * faktorStreams;
 
-    this.zeigeDialog("Ergebnis", `Maximale Datenrate (Brutto):<br><br>${datenrate} MBits/s`);
+    this.zeigeDialog("Ergebnis", `Maximale Datenrate (Brutto): ${datenrate} MBits/s`);
   }
 
 
