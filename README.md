@@ -1,5 +1,7 @@
 # Ionic app to demonstrate several UI Components #
 
+<br>
+
 The Ionic app contained in this repository demonstrates the following UI components:
 * Page 1 (home): [ion-card](https://ionicframework.com/docs/api/card) and [ion-img](https://ionicframework.com/docs/api/img), the latter one for displaying an imags contained in the application.
 * Page 2: [ion-toggle](https://ionicframework.com/docs/api/toggle)
@@ -11,8 +13,9 @@ The Ionic app contained in this repository demonstrates the following UI compone
 
 ## Screenshots ##
 
-![Screenshot 1](screenshot_1.png)   ![Screenshot 2](screenshot_2.png) 
-![Screenshot 3](screenshot_3.png)   ![Screenshot 4](screenshot_4.png) 
+![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png) 
+
+![Screenshot 3](screenshot_3.png) &nbsp; ![Screenshot 4](screenshot_4.png) 
 
 <br>
 
