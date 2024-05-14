@@ -44,8 +44,9 @@ export class Seite2Page {
 
 
   /**
-   * Aktuellen Farbcode erstellen und in Member-Variable schreiben.
-   */
+    * Generiert einen Farbcode basierend auf den Werten der Eigenschaften `rotAn`, `gruenAn` und `blauAn`.
+    * Der Farbcode wird der Eigenschaft 'farbeHexCode' zugewiesen.
+    */
   private erstelleFarbcode() {
 
     let farbcode = "#";
