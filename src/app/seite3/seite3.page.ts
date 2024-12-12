@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
+
 /**
  * Seite zur Demonstration Verwendung von UI-Komponente `ion-select`.
  *

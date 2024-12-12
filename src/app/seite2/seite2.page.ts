@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-seite2',
   templateUrl: './seite2.page.html',
